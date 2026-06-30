@@ -36,28 +36,28 @@
 
 :root {
   --radius: 0.75rem;
-  /* Athletic dark theme with energetic orange accent */
-  --background: oklch(0.16 0.015 250);
-  --foreground: oklch(0.98 0.005 250);
-  --surface: oklch(0.21 0.018 250);
-  --surface-foreground: oklch(0.98 0.005 250);
-  --card: oklch(0.21 0.018 250);
-  --card-foreground: oklch(0.98 0.005 250);
-  --popover: oklch(0.21 0.018 250);
-  --popover-foreground: oklch(0.98 0.005 250);
-  --primary: oklch(0.72 0.19 45); /* vibrant orange */
-  --primary-foreground: oklch(0.15 0.01 250);
-  --secondary: oklch(0.28 0.02 250);
-  --secondary-foreground: oklch(0.98 0.005 250);
-  --muted: oklch(0.25 0.015 250);
-  --muted-foreground: oklch(0.7 0.02 250);
-  --accent: oklch(0.72 0.19 45);
-  --accent-foreground: oklch(0.15 0.01 250);
+  /* Recordika brand: deep teal base, cyan primary, hot pink accent */
+  --background: oklch(0.22 0.04 215);
+  --foreground: oklch(0.98 0.01 200);
+  --surface: oklch(0.28 0.05 215);
+  --surface-foreground: oklch(0.98 0.01 200);
+  --card: oklch(0.28 0.05 215);
+  --card-foreground: oklch(0.98 0.01 200);
+  --popover: oklch(0.28 0.05 215);
+  --popover-foreground: oklch(0.98 0.01 200);
+  --primary: oklch(0.82 0.13 200); /* bright cyan/turquoise */
+  --primary-foreground: oklch(0.2 0.04 215);
+  --secondary: oklch(0.35 0.06 215);
+  --secondary-foreground: oklch(0.98 0.01 200);
+  --muted: oklch(0.32 0.05 215);
+  --muted-foreground: oklch(0.78 0.03 205);
+  --accent: oklch(0.7 0.25 0); /* hot pink */
+  --accent-foreground: oklch(0.98 0.01 200);
   --destructive: oklch(0.6 0.22 27);
-  --destructive-foreground: oklch(0.98 0.005 250);
-  --border: oklch(0.3 0.015 250);
-  --input: oklch(0.3 0.015 250);
-  --ring: oklch(0.72 0.19 45);
+  --destructive-foreground: oklch(0.98 0.01 200);
+  --border: oklch(0.38 0.05 215);
+  --input: oklch(0.38 0.05 215);
+  --ring: oklch(0.82 0.13 200);
 }
 
 @layer base {
@@ -93,14 +93,14 @@
   gap: 0.5rem;
   padding: 0.875rem 1.5rem;
   border-radius: var(--radius);
-  background: var(--color-primary);
-  color: var(--color-primary-foreground);
+  background: var(--color-accent);
+  color: var(--color-accent-foreground);
   font-weight: 600;
   transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease;
-  box-shadow: 0 10px 30px -10px oklch(0.72 0.19 45 / 0.5);
+  box-shadow: 0 10px 30px -10px oklch(0.7 0.25 0 / 0.55);
   &:hover {
     transform: translateY(-1px);
-    background: oklch(0.78 0.19 45);
+    background: oklch(0.76 0.25 0);
   }
 }
 
@@ -132,8 +132,8 @@
   gap: 0.5rem;
   padding: 0.4rem 0.8rem;
   border-radius: 999px;
-  background: oklch(0.72 0.19 45 / 0.12);
-  color: var(--color-primary);
+  background: oklch(0.7 0.25 0 / 0.15);
+  color: oklch(0.82 0.22 0);
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.05em;
