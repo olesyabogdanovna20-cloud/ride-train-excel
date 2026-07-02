@@ -253,7 +253,7 @@ function CoachCard({ img, name, title, achievements, experience }: {
   return (
     <article className="rounded-3xl bg-surface border border-border overflow-hidden">
       <div className="aspect-[4/3] overflow-hidden bg-background">
-        <img src={img} alt={name} loading="lazy" width={1024} height={768} className="h-full w-full object-cover" />
+        <img src={img} alt={name} loading="lazy" width={1024} height={768} className={`h-full w-full object-cover ${name === "Илья Праслов" ? "object-top" : "object-center"}`} />
       </div>
       <div className="p-8">
         <h3 className="text-2xl font-bold">{name}</h3>
