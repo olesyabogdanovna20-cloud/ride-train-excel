@@ -283,9 +283,9 @@ function CoachCard({ img, name, title, achievements, experience }: {
 
 function FreeLessons() {
   const cycling = [
-    { t: "Правильная посадка на велосипеде", d: "Основы комфортной и эффективной езды." },
-    { t: "Базовое торможение", d: "Как безопасно и эффективно останавливаться." },
-    { t: "Настройка оборудования", d: "Проверка велосипеда перед тренировкой." },
+    { t: "Введение", d: "Знакомство с платформой Recordika и базовые принципы обучения.", url: "https://kinescope.io/2i5XjhXay2XQFmfgVknhvp" },
+    { t: "Байкфит", d: "Правильная посадка на велосипеде для комфорта и эффективности.", url: "https://kinescope.io/nUS1yQeamLQdzfTT3qouMm" },
+    { t: "Расположение велосипеда", d: "Как располагать велосипед на тренировке и старте.", url: "https://kinescope.io/eJHeuLmAQi3BV9MMg8KudH" },
   ];
   const tri = [
     { t: "Структура тренировок", d: "Как совмещать плавание, велосипед и бег." },
@@ -300,7 +300,7 @@ function FreeLessons() {
           title="Начните бесплатно"
           sub="Познакомьтесь с методикой обучения и качеством материалов до оформления доступа."
         />
-        <LessonRow title="Бесплатные уроки по велоспорту" items={cycling} />
+        <LessonRow title="Бесплатные уроки по велосипеду" items={cycling} />
         <LessonRow title="Бесплатные уроки по триатлону" items={tri} />
         <div className="mt-10 flex justify-center">
           <a href="#pricing" className="btn-ghost">
@@ -312,27 +312,36 @@ function FreeLessons() {
   );
 }
 
-function LessonRow({ title, items }: { title: string; items: { t: string; d: string }[] }) {
+function LessonRow({ title, items }: { title: string; items: { t: string; d: string; url?: string }[] }) {
   return (
     <div className="mt-12">
       <h3 className="text-xl font-bold mb-6">{title}</h3>
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {items.map((it) => (
-          <div key={it.t} className="group rounded-2xl bg-card border border-border overflow-hidden hover:border-primary/50 transition cursor-pointer">
-            <div className="aspect-video relative bg-gradient-to-br from-primary/20 to-background grid place-items-center">
-              <div className="grid h-14 w-14 place-items-center rounded-full bg-primary text-primary-foreground group-hover:scale-110 transition">
-                <PlayCircle className="h-7 w-7" />
+        {items.map((it) => {
+          const card = (
+            <div className="group rounded-2xl bg-card border border-border overflow-hidden hover:border-primary/50 transition">
+              <div className="aspect-video relative bg-gradient-to-br from-primary/20 to-background grid place-items-center">
+                <div className="grid h-14 w-14 place-items-center rounded-full bg-primary text-primary-foreground group-hover:scale-110 transition">
+                  <PlayCircle className="h-7 w-7" />
+                </div>
+                <span className="absolute top-3 right-3 text-xs font-semibold bg-background/80 backdrop-blur px-2 py-1 rounded">
+                  Бесплатно
+                </span>
               </div>
-              <span className="absolute top-3 right-3 text-xs font-semibold bg-background/80 backdrop-blur px-2 py-1 rounded">
-                Бесплатно
-              </span>
+              <div className="p-5">
+                <h4 className="font-semibold">{it.t}</h4>
+                <p className="text-sm text-muted-foreground mt-1">{it.d}</p>
+              </div>
             </div>
-            <div className="p-5">
-              <h4 className="font-semibold">{it.t}</h4>
-              <p className="text-sm text-muted-foreground mt-1">{it.d}</p>
-            </div>
-          </div>
-        ))}
+          );
+          return it.url ? (
+            <a key={it.t} href={it.url} target="_blank" rel="noopener noreferrer" className="block cursor-pointer">
+              {card}
+            </a>
+          ) : (
+            <div key={it.t}>{card}</div>
+          );
+        })}
       </div>
     </div>
   );
