@@ -12,8 +12,10 @@ import {
   Award,
 } from "lucide-react";
 import heroImg from "@/assets/hero.jpg";
-import coachCycling from "@/assets/coach-cycling.jpg";
-import coachTriathlon from "@/assets/coach-triathlon.jpg";
+import coachCyclingAsset from "@/assets/maxim-kozyrev.jpg.asset.json";
+import coachTriathlonAsset from "@/assets/ilya-praslov.jpg.asset.json";
+const coachCycling = coachCyclingAsset.url;
+const coachTriathlon = coachTriathlonAsset.url;
 import appMockup from "@/assets/app-mockup.jpg";
 
 export const Route = createFileRoute("/")({
