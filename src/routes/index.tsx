@@ -314,7 +314,7 @@ function FreeLessons() {
   );
 }
 
-function LessonRow({ title, items }: { title: string; items: { t: string; d: string; url?: string }[] }) {
+function LessonRow({ title, items }: { title: string; items: { t: string; url?: string }[] }) {
   const [openUrl, setOpenUrl] = useState<string | null>(null);
   const embedUrl = openUrl
     ? openUrl.replace("kinescope.io/", "kinescope.io/embed/")
