@@ -1,4 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
+import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import {
   Bike,
   Trophy,
@@ -313,13 +315,18 @@ function FreeLessons() {
 }
 
 function LessonRow({ title, items }: { title: string; items: { t: string; d: string; url?: string }[] }) {
+  const [openUrl, setOpenUrl] = useState<string | null>(null);
+  const embedUrl = openUrl
+    ? openUrl.replace("kinescope.io/", "kinescope.io/embed/")
+    : null;
+  const activeTitle = items.find((it) => it.url === openUrl)?.t ?? "Видеоурок";
   return (
     <div className="mt-12">
       <h3 className="text-xl font-bold mb-6">{title}</h3>
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {items.map((it) => {
           const card = (
-            <div className="group rounded-2xl bg-card border border-border overflow-hidden hover:border-primary/50 transition">
+            <div className="group rounded-2xl bg-card border border-border overflow-hidden hover:border-primary/50 transition h-full">
               <div className="aspect-video relative bg-gradient-to-br from-primary/20 to-background grid place-items-center">
                 <div className="grid h-14 w-14 place-items-center rounded-full bg-primary text-primary-foreground group-hover:scale-110 transition">
                   <PlayCircle className="h-7 w-7" />
@@ -335,14 +342,35 @@ function LessonRow({ title, items }: { title: string; items: { t: string; d: str
             </div>
           );
           return it.url ? (
-            <a key={it.t} href={it.url} target="_blank" rel="noopener noreferrer" className="block cursor-pointer">
+            <button
+              key={it.t}
+              type="button"
+              onClick={() => setOpenUrl(it.url!)}
+              className="block cursor-pointer text-left w-full"
+            >
               {card}
-            </a>
+            </button>
           ) : (
             <div key={it.t}>{card}</div>
           );
         })}
       </div>
+      <Dialog open={!!openUrl} onOpenChange={(o) => !o && setOpenUrl(null)}>
+        <DialogContent className="max-w-4xl p-0 overflow-hidden bg-background border-border">
+          <DialogTitle className="sr-only">{activeTitle}</DialogTitle>
+          {embedUrl && (
+            <div className="aspect-video w-full">
+              <iframe
+                src={embedUrl}
+                title={activeTitle}
+                allow="autoplay; fullscreen; picture-in-picture; encrypted-media;"
+                allowFullScreen
+                className="h-full w-full"
+              />
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }
