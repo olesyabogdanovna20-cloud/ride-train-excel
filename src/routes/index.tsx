@@ -547,7 +547,6 @@ function Footer() {
           <span>© 2026 Recordika. Все права защищены.</span>
         </div>
         <div className="flex gap-6">
-          <a href="#" className="hover:text-foreground transition">Контакты</a>
           <a href="#" className="hover:text-foreground transition">Оферта</a>
           <a href="#" className="hover:text-foreground transition">Политика</a>
         </div>
