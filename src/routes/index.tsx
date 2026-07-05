@@ -285,14 +285,14 @@ function CoachCard({ img, name, title, achievements, experience }: {
 
 function FreeLessons() {
   const cycling = [
-    { t: "Введение", d: "Знакомство с платформой Recordika и базовые принципы обучения.", url: "https://kinescope.io/2i5XjhXay2XQFmfgVknhvp" },
-    { t: "Байкфит", d: "Правильная посадка на велосипеде для комфорта и эффективности.", url: "https://kinescope.io/nUS1yQeamLQdzfTT3qouMm" },
-    { t: "Расположение велосипеда", d: "Как располагать велосипед на тренировке и старте.", url: "https://kinescope.io/eJHeuLmAQi3BV9MMg8KudH" },
+    { t: "Введение", url: "https://kinescope.io/2i5XjhXay2XQFmfgVknhvp" },
+    { t: "Байкфит", url: "https://kinescope.io/nUS1yQeamLQdzfTT3qouMm" },
+    { t: "Расположение велосипеда", url: "https://kinescope.io/eJHeuLmAQi3BV9MMg8KudH" },
   ];
   const tri = [
-    { t: "С чего начать", d: "Первые шаги в триатлоне: базовые принципы и план подготовки.", url: "https://kinescope.io/0AGQPiDNieLUPVhqk8ftXX" },
-    { t: "Выбор экипировки", d: "Как подобрать базовую экипировку для тренировок и стартов.", url: "https://kinescope.io/jJntw8h6CVfqCY83sd98bg" },
-    { t: "Разминка и заминка", d: "Разминка и заминка во время тренировок: упражнения и техника.", url: "https://kinescope.io/athCUc7XLmhuxsDiR4kNxQ" },
+    { t: "С чего начать", url: "https://kinescope.io/0AGQPiDNieLUPVhqk8ftXX" },
+    { t: "Выбор экипировки", url: "https://kinescope.io/jJntw8h6CVfqCY83sd98bg" },
+    { t: "Разминка и заминка", url: "https://kinescope.io/athCUc7XLmhuxsDiR4kNxQ" },
   ];
   return (
     <section id="free" className="section-pad bg-surface/40">
@@ -314,7 +314,7 @@ function FreeLessons() {
   );
 }
 
-function LessonRow({ title, items }: { title: string; items: { t: string; d: string; url?: string }[] }) {
+function LessonRow({ title, items }: { title: string; items: { t: string; url?: string }[] }) {
   const [openUrl, setOpenUrl] = useState<string | null>(null);
   const embedUrl = openUrl
     ? openUrl.replace("kinescope.io/", "kinescope.io/embed/")
@@ -337,7 +337,6 @@ function LessonRow({ title, items }: { title: string; items: { t: string; d: str
               </div>
               <div className="p-5">
                 <h4 className="font-semibold">{it.t}</h4>
-                <p className="text-sm text-muted-foreground mt-1">{it.d}</p>
               </div>
             </div>
           );
