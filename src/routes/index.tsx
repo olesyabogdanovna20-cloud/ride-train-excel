@@ -337,7 +337,6 @@ function LessonRow({ title, items }: { title: string; items: { t: string; url?: 
               </div>
               <div className="p-5">
                 <h4 className="font-semibold">{it.t}</h4>
-                <p className="text-sm text-muted-foreground mt-1">{it.d}</p>
               </div>
             </div>
           );
