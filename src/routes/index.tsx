@@ -18,7 +18,8 @@ import coachCyclingAsset from "@/assets/maxim-kozyrev.jpg.asset.json";
 import coachTriathlonAsset from "@/assets/ilya-praslov.jpg.asset.json";
 const coachCycling = coachCyclingAsset.url;
 const coachTriathlon = coachTriathlonAsset.url;
-import appMockup from "@/assets/app-mockup.jpg";
+import appMockupAsset from "@/assets/app-mockup.jpg.asset.json";
+const appMockup = appMockupAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -477,10 +478,10 @@ function AppSection() {
           <img
             src={appMockup}
             alt="Приложение Recordika"
-            loading="lazy"
-            width={1024}
-            height={1024}
-            className="relative rounded-3xl w-full"
+            loading="eager"
+            width={590}
+            height={1280}
+            className="relative rounded-3xl w-full h-auto shadow-2xl"
           />
         </div>
       </div>
