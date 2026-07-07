@@ -18,7 +18,8 @@ import coachCyclingAsset from "@/assets/maxim-kozyrev.jpg.asset.json";
 import coachTriathlonAsset from "@/assets/ilya-praslov.jpg.asset.json";
 const coachCycling = coachCyclingAsset.url;
 const coachTriathlon = coachTriathlonAsset.url;
-import appMockup from "@/assets/app-mockup.jpg";
+import appMockupAsset from "@/assets/app-mockup.jpg.asset.json";
+const appMockup = appMockupAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
