@@ -347,7 +347,7 @@ function LessonRow({ title, items }: { title: string; items: { t: string; url?: 
                 <div className="relative grid h-14 w-14 place-items-center rounded-full bg-primary text-primary-foreground group-hover:scale-110 transition">
                   <PlayCircle className="h-7 w-7" />
                 </div>
-                <span className="relative top-[-90px] right-[-90px] text-xs font-semibold bg-background/80 backdrop-blur px-2 py-1 rounded">
+                <span className="absolute top-3 right-3 z-10 text-xs font-semibold bg-background/80 backdrop-blur px-2 py-1 rounded">
                   Бесплатно
                 </span>
               </div>
