@@ -554,8 +554,8 @@ function Footer() {
           <span>© 2026 EMRI. Все права защищены.</span>
         </div>
         <div className="flex gap-6">
-          <a href="#" className="hover:text-foreground transition">Оферта</a>
-          <a href="#" className="hover:text-foreground transition">Политика</a>
+          <a href="https://drive.google.com/file/d/1FGg1IRqlDh9yC-7RzSJzimWK9vEOfGCz/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition">Оферта</a>
+          <a href="https://drive.google.com/file/d/1nTIYXR_zdXzuzHurlRqInxgWnTTCYhF6/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition">Политика</a>
         </div>
       </div>
     </footer>
