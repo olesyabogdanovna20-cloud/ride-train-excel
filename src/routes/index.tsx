@@ -68,11 +68,15 @@ function Nav() {
   return (
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur-md">
       <div className="container-x flex h-16 items-center justify-between">
-        <a href="#top" className="flex items-center gap-2 font-bold text-lg">
-          <span className="grid h-8 w-8 place-items-center rounded-md bg-primary text-primary-foreground">
-            R
-          </span>
-          EMRI
+        <a href="#top" className="flex items-center">
+          <img
+            src={logo}
+            alt="EMRI"
+            loading="eager"
+            width={48}
+            height={48}
+            className="h-12 w-auto"
+          />
         </a>
         <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
           <a href="#directions" className="hover:text-foreground transition">Направления</a>
