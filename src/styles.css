@@ -36,7 +36,7 @@
 
 :root {
   --radius: 0.75rem;
-  /* Recordika brand: deep teal base, cyan primary, hot pink accent */
+  /* EMRI brand: deep teal base, cyan primary, hot pink accent */
   --background: oklch(0.22 0.04 215);
   --foreground: oklch(0.98 0.01 200);
   --surface: oklch(0.28 0.05 215);

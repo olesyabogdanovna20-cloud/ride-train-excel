@@ -20,17 +20,19 @@ const coachCycling = coachCyclingAsset.url;
 const coachTriathlon = coachTriathlonAsset.url;
 import appMockupAsset from "@/assets/app-mockup.jpg.asset.json";
 const appMockup = appMockupAsset.url;
+import logoAsset from "@/assets/logo.png.asset.json";
+const logo = logoAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Recordika — обучение велоспорту и триатлону" },
+      { title: "EMRI — обучение велоспорту и триатлону" },
       {
         name: "description",
         content:
           "Онлайн-обучение велоспорту и триатлону от чемпионов. Видеоуроки, разбор техники и тренировочные программы в мобильном приложении.",
       },
-      { property: "og:title", content: "Recordika — обучение велоспорту и триатлону" },
+      { property: "og:title", content: "EMRI — обучение велоспорту и триатлону" },
       {
         property: "og:description",
         content:
@@ -66,11 +68,15 @@ function Nav() {
   return (
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur-md">
       <div className="container-x flex h-16 items-center justify-between">
-        <a href="#top" className="flex items-center gap-2 font-bold text-lg">
-          <span className="grid h-8 w-8 place-items-center rounded-md bg-primary text-primary-foreground">
-            R
-          </span>
-          Recordika
+        <a href="#top" aria-label="EMRI" className="flex items-center">
+          <img
+            src={logo}
+            alt="EMRI"
+            loading="eager"
+            width={56}
+            height={56}
+            className="h-14 w-auto rounded-lg"
+          />
         </a>
         <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
           <a href="#directions" className="hover:text-foreground transition">Направления</a>
@@ -102,7 +108,7 @@ function Hero() {
         <div className="max-w-3xl">
           <span className="eyebrow">Обучение онлайн</span>
           <h1 className="mt-5 text-5xl md:text-7xl font-black leading-[1.05]">
-            Recordika —{" "}
+            EMRI —{" "}
             <span className="text-primary">обучение велоспорту и триатлону</span>
           </h1>
           <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl">
@@ -140,12 +146,12 @@ function Features() {
     { icon: Trophy, t: "Обучение от чемпионов", d: "Курсы созданы спортсменами и тренерами с международным опытом выступлений и подготовки атлетов." },
     { icon: PlayCircle, t: "Практические видеоуроки", d: "Каждый урок посвящен конкретному навыку и помогает быстро внедрять знания в тренировки." },
     { icon: Users, t: "Для любого уровня", d: "Подойдет как новичкам, которые только начинают заниматься, так и опытным спортсменам." },
-    { icon: Smartphone, t: "Доступ с телефона", d: "Все материалы доступны в мобильном приложении Recordika в любое удобное время." },
+    { icon: Smartphone, t: "Доступ с телефона", d: "Все материалы доступны в мобильном приложении EMRI в любое удобное время." },
   ];
   return (
     <section className="section-pad">
       <div className="container-x">
-        <SectionHeader eyebrow="Преимущества" title="Почему Recordika" />
+        <SectionHeader eyebrow="Преимущества" title="Почему EMRI" />
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {items.map(({ icon: Icon, t, d }) => (
             <div key={t} className="rounded-2xl bg-surface border border-border p-6 hover:border-primary/50 transition">
@@ -217,7 +223,7 @@ function Coaches() {
   return (
     <section id="coaches" className="section-pad">
       <div className="container-x">
-        <SectionHeader eyebrow="Команда" title="Тренеры Recordika" />
+        <SectionHeader eyebrow="Команда" title="Тренеры EMRI" />
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           <CoachCard
             img={coachCycling}
@@ -448,7 +454,7 @@ function AppSection() {
         <div>
           <span className="eyebrow">Мобильное приложение</span>
           <h2 className="mt-4 text-3xl md:text-5xl font-black">
-            Обучайтесь в приложении Recordika
+            Обучайтесь в приложении EMRI
           </h2>
           <p className="mt-4 text-muted-foreground text-lg">
             После оформления доступа вы сможете смотреть уроки через наше мобильное
@@ -477,7 +483,7 @@ function AppSection() {
           <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full" />
           <img
             src={appMockup}
-            alt="Приложение Recordika"
+            alt="Приложение EMRI"
             loading="eager"
             width={1024}
             height={1024}
@@ -493,7 +499,7 @@ function FAQ() {
   const items = [
     { q: "Кому подойдет обучение?", a: "Новичкам, любителям и опытным спортсменам, которые хотят улучшить технику и результаты." },
     { q: "Можно ли сначала попробовать бесплатно?", a: "Да. Часть уроков доступна бесплатно в соответствующем разделе." },
-    { q: "Где проходят занятия?", a: "Все материалы доступны онлайн через приложение Recordika, вы можете заниматься в удобном для вас месте." },
+    { q: "Где проходят занятия?", a: "Все материалы доступны онлайн через приложение EMRI, вы можете заниматься в удобном для вас месте." },
     { q: "Как получить доступ после оплаты?", a: "После оформления подписки доступ автоматически активируется в вашем аккаунте." },
   ];
   return (
@@ -543,9 +549,9 @@ function Footer() {
       <div className="container-x flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
         <div className="flex items-center gap-2">
           <span className="grid h-7 w-7 place-items-center rounded-md bg-primary text-primary-foreground font-bold text-xs">
-            R
+            E
           </span>
-          <span>© 2026 Recordika. Все права защищены.</span>
+          <span>© 2026 EMRI. Все права защищены.</span>
         </div>
         <div className="flex gap-6">
           <a href="#" className="hover:text-foreground transition">Оферта</a>
