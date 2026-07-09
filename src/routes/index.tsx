@@ -313,11 +313,6 @@ function FreeLessons() {
         />
         <LessonRow title="Бесплатные уроки по велосипеду" items={cycling} />
         <LessonRow title="Бесплатные уроки по триатлону" items={tri} />
-        <div className="mt-10 flex justify-center">
-          <a href="#pricing" className="btn-ghost">
-            Открыть все бесплатные уроки <ArrowRight className="h-4 w-4" />
-          </a>
-        </div>
       </div>
     </section>
   );
@@ -451,6 +446,7 @@ function PriceCard({ icon: Icon, title, plans, featured }: {
           </div>
         ))}
       </div>
+      <a href="#pricing" className="btn-primary mt-8 w-full">Выбрать тариф</a>
     </div>
   );
 }
