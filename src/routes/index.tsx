@@ -557,7 +557,8 @@ function Footer() {
           </span>
           <span>© 2026 EMRI. Все права защищены.</span>
         </div>
-        <div className="flex gap-6">
+        <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
+          <a href="mailto:recordika.app@gmail.com" className="hover:text-foreground transition">recordika.app@gmail.com</a>
           <a href="https://drive.google.com/file/d/1FGg1IRqlDh9yC-7RzSJzimWK9vEOfGCz/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition">Оферта</a>
           <a href="https://drive.google.com/file/d/1nTIYXR_zdXzuzHurlRqInxgWnTTCYhF6/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition">Политика</a>
         </div>
