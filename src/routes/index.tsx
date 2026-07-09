@@ -443,7 +443,10 @@ function PriceCard({ icon: Icon, title, plans, featured }: {
                   </span>
                 )}
               </div>
-              <span className="font-bold text-lg">{pl.c}</span>
+              <div className="flex items-center gap-3">
+                <span className="font-bold text-lg">{pl.c}</span>
+                <ArrowRight className="h-5 w-5 text-primary transition-transform group-hover:translate-x-1" />
+              </div>
             </>
           );
           return pl.url ? (
@@ -452,18 +455,17 @@ function PriceCard({ icon: Icon, title, plans, featured }: {
               href={pl.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-between p-4 rounded-xl bg-background/60 border border-border hover:border-primary/60 transition"
+              className="group flex items-center justify-between p-4 rounded-xl bg-background border border-border hover:border-primary hover:bg-primary/5 transition"
             >
               {content}
             </a>
           ) : (
-            <div key={pl.p} className="flex items-center justify-between p-4 rounded-xl bg-background/60 border border-border">
+            <div key={pl.p} className="group flex items-center justify-between p-4 rounded-xl bg-background/60 border border-border">
               {content}
             </div>
           );
         })}
       </div>
-      <a href={plans[0]?.url ?? "#pricing"} target={plans[0]?.url ? "_blank" : undefined} rel={plans[0]?.url ? "noopener noreferrer" : undefined} className="btn-primary mt-8 w-full">Выбрать тариф</a>
     </div>
   );
 }
