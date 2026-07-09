@@ -451,7 +451,6 @@ function PriceCard({ icon: Icon, title, plans, featured }: {
           </div>
         ))}
       </div>
-      <a href="#" className="btn-primary mt-8 w-full">Выбрать тариф</a>
     </div>
   );
 }
