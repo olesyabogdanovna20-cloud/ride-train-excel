@@ -399,9 +399,9 @@ function Pricing() {
             icon={Bike}
             title="Велоспорт"
             plans={[
-              { p: "1 месяц", c: "1 900 ₽" },
-              { p: "3 месяца", c: "3 990 ₽" },
-              { p: "12 месяцев", c: "11 400 ₽", badge: "Выгодно" },
+              { p: "1 месяц", c: "1 900 ₽", url: "https://payform.ru/f0bYZqn/" },
+              { p: "3 месяца", c: "3 990 ₽", url: "https://payform.ru/ewbYZqm/" },
+              { p: "12 месяцев", c: "11 400 ₽", badge: "Выгодно", url: "https://payform.ru/evbYZql/" },
             ]}
           />
           <PriceCard
@@ -409,9 +409,9 @@ function Pricing() {
             title="Триатлон"
             featured
             plans={[
-              { p: "1 месяц", c: "3 300 ₽" },
-              { p: "3 месяца", c: "6 930 ₽" },
-              { p: "12 месяцев", c: "19 800 ₽", badge: "Выгодно" },
+              { p: "1 месяц", c: "3 300 ₽", url: "https://payform.ru/eubYZqk/" },
+              { p: "3 месяца", c: "6 930 ₽", url: "https://payform.ru/etbYZqj/" },
+              { p: "12 месяцев", c: "19 800 ₽", badge: "Выгодно", url: "https://payform.ru/esbYZqi/" },
             ]}
           />
         </div>
@@ -421,7 +421,7 @@ function Pricing() {
 }
 
 function PriceCard({ icon: Icon, title, plans, featured }: {
-  icon: any; title: string; plans: { p: string; c: string; badge?: string }[]; featured?: boolean;
+  icon: any; title: string; plans: { p: string; c: string; badge?: string; url?: string }[]; featured?: boolean;
 }) {
   return (
     <div className={`rounded-3xl p-8 border ${featured ? "bg-gradient-to-br from-primary/15 to-surface border-primary/40" : "bg-surface border-border"}`}>
@@ -432,21 +432,38 @@ function PriceCard({ icon: Icon, title, plans, featured }: {
         <h3 className="text-2xl font-bold">{title}</h3>
       </div>
       <div className="mt-8 space-y-3">
-        {plans.map((pl) => (
-          <div key={pl.p} className="flex items-center justify-between p-4 rounded-xl bg-background/60 border border-border">
-            <div className="flex items-center gap-3">
-              <span className="font-medium">{pl.p}</span>
-              {pl.badge && (
-                <span className="text-xs font-semibold px-2 py-0.5 rounded bg-primary/20 text-primary">
-                  {pl.badge}
-                </span>
-              )}
+        {plans.map((pl) => {
+          const content = (
+            <>
+              <div className="flex items-center gap-3">
+                <span className="font-medium">{pl.p}</span>
+                {pl.badge && (
+                  <span className="text-xs font-semibold px-2 py-0.5 rounded bg-primary/20 text-primary">
+                    {pl.badge}
+                  </span>
+                )}
+              </div>
+              <span className="font-bold text-lg">{pl.c}</span>
+            </>
+          );
+          return pl.url ? (
+            <a
+              key={pl.p}
+              href={pl.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-between p-4 rounded-xl bg-background/60 border border-border hover:border-primary/60 transition"
+            >
+              {content}
+            </a>
+          ) : (
+            <div key={pl.p} className="flex items-center justify-between p-4 rounded-xl bg-background/60 border border-border">
+              {content}
             </div>
-            <span className="font-bold text-lg">{pl.c}</span>
-          </div>
-        ))}
+          );
+        })}
       </div>
-      <a href="#pricing" className="btn-primary mt-8 w-full">Выбрать тариф</a>
+      <a href={plans[0]?.url ?? "#pricing"} target={plans[0]?.url ? "_blank" : undefined} rel={plans[0]?.url ? "noopener noreferrer" : undefined} className="btn-primary mt-8 w-full">Выбрать тариф</a>
     </div>
   );
 }
