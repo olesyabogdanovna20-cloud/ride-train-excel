@@ -316,7 +316,7 @@ function FreeLessons() {
 function LessonRow({ title, items }: { title: string; items: { t: string; url?: string }[] }) {
   const [openUrl, setOpenUrl] = useState<string | null>(null);
   const embedUrl = openUrl
-    ? openUrl.replace("kinescope.io/", "kinescope.io/embed/")
+    ? openUrl.replace("kinescope.io/", "kinescope.io/embed/") + "?autoplay=1"
     : null;
   const activeTitle = items.find((it) => it.url === openUrl)?.t ?? "Видеоурок";
   return (
