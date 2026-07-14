@@ -13,17 +13,12 @@ import {
   Activity,
   Award,
 } from "lucide-react";
-import heroImg from "@/assets/hero.jpg";
-import coachCyclingAsset from "@/assets/maxim-kozyrev.jpg.asset.json";
-import coachTriathlonAsset from "@/assets/ilya-praslov.jpg.asset.json";
-const coachCycling = coachCyclingAsset.url;
-const coachTriathlon = coachTriathlonAsset.url;
-import appMockupAsset from "@/assets/app-mockup.jpg.asset.json";
-const appMockup = appMockupAsset.url;
-import logoAsset from "@/assets/logo.png.asset.json";
-const logo = logoAsset.url;
-import videoPosterAsset from "@/assets/cycling-running.png.asset.json";
-const videoPoster = videoPosterAsset.url;
+const heroImg = "/hero.jpg";
+const coachCycling = "/maxim-kozyrev.jpg";
+const coachTriathlon = "/ilya-praslov.jpg";
+const appMockup = "/app-mockup.jpg";
+const logo = "/logo.png";
+const videoPoster = "/cycling-running.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
