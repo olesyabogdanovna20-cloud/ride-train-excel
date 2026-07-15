@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+
 import { useState } from "react";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import {
@@ -19,31 +19,7 @@ const coachTriathlon = "/ilya-praslov.jpg";
 const appMockup = "/app-mockup.jpg";
 const logo = "/logo.png";
 const videoPoster = "/cycling-running.png";
-
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "EMRI — обучение велоспорту и триатлону" },
-      {
-        name: "description",
-        content:
-          "Онлайн-обучение велоспорту и триатлону от чемпионов. Видеоуроки, разбор техники и тренировочные программы в мобильном приложении.",
-      },
-      { property: "og:title", content: "EMRI — обучение велоспорту и триатлону" },
-      {
-        property: "og:description",
-        content:
-          "Практические видеоуроки от мастеров спорта. Велоспорт и триатлон для любого уровня.",
-      },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/" },
-    ],
-    links: [{ rel: "canonical", href: "/" }],
-  }),
-  component: Index,
-});
-
-function Index() {
+export default function Index() {
   return (
     <div className="min-h-screen bg-background">
       <Nav />
