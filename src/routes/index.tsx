@@ -20,13 +20,7 @@ const coachTriathlon = "/ilya-praslov.jpg";
 const appMockup = "/app-mockup.jpg";
 const logo = "/logo.png";
 const videoPoster = "/cycling-running.png";
-
 export default function Index() {
-  return _Index();
-}
-
-
-function Index() {
   return (
     <div className="min-h-screen bg-background">
       <Nav />
