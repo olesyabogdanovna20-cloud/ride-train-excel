@@ -313,11 +313,46 @@ function FreeLessons() {
 
 ];
   const tri = [
-    { t: "С чего начать", url: "https://kinescope.io/0AGQPiDNieLUPVhqk8ftXX" },
-    { t: "Выбор экипировки", url: "https://kinescope.io/jJntw8h6CVfqCY83sd98bg" },
-    { t: "Разминка и заминка", url: "https://kinescope.io/athCUc7XLmhuxsDiR4kNxQ" },
-    { t: "Профилактика травм", url: "https://kinescope.io/cbtkLEm7fSnK14wfo2mKej" },
-  ];
+
+  {
+
+    t: "С чего начать",
+
+    url: "https://kinescope.io/0AGQPiDNieLUPVhqk8ftXX",
+
+    image: "/tri-start.jpg",
+
+  },
+
+  {
+
+    t: "Выбор экипировки",
+
+    url: "https://kinescope.io/jJntw8h6CVfqCY83sd98bg",
+
+  },
+
+  {
+
+    t: "Разминка и заминка",
+
+    url: "https://kinescope.io/athCUc7XLmhuxsDiR4kNxQ",
+
+    image: "/tri-warmup.jpg",
+
+  },
+
+  {
+
+    t: "Профилактика травм",
+
+    url: "https://kinescope.io/cbtkLEm7fSnK14wfo2mKej",
+
+    image: "/tri-injury.jpg",
+
+  },
+
+];
   return (
     <section id="free" className="section-pad bg-surface/40">
       <div className="container-x">
