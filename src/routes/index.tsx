@@ -662,7 +662,7 @@ function PromoTimer() {
       <div className="container-x">
         <div className="mx-auto max-w-xl rounded-3xl border border-primary/40 bg-card p-8 text-center shadow-lg">
           <p className="text-lg font-semibold">
-            До конца действия промокода
+           Получить скидку 15% по промокоду emri26
           </p>
 
           <div className="mt-4 text-5xl font-black text-primary tabular-nums">
