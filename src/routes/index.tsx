@@ -273,11 +273,13 @@ function FreeLessons() {
     { t: "Введение", url: "https://kinescope.io/2i5XjhXay2XQFmfgVknhvp" },
     { t: "Байкфит", url: "https://kinescope.io/nUS1yQeamLQdzfTT3qouMm" },
     { t: "Расположение велосипеда", url: "https://kinescope.io/eJHeuLmAQi3BV9MMg8KudH" },
+    { t: "Тренировка на повышение скорости", url: "https://kinescope.io/m1MJWfc3QbDtEKKQssedY9" },
   ];
   const tri = [
     { t: "С чего начать", url: "https://kinescope.io/0AGQPiDNieLUPVhqk8ftXX" },
     { t: "Выбор экипировки", url: "https://kinescope.io/jJntw8h6CVfqCY83sd98bg" },
     { t: "Разминка и заминка", url: "https://kinescope.io/athCUc7XLmhuxsDiR4kNxQ" },
+    { t: "Профилактика травм", url: "https://kinescope.io/cbtkLEm7fSnK14wfo2mKej" },
   ];
   return (
     <section id="free" className="section-pad bg-surface/40">
