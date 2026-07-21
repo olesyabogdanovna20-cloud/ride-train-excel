@@ -29,10 +29,10 @@ export default function Index() {
       <Coaches />
       <FreeLessons />
       <Pricing />
+      <PromoTimer />
       <AppSection />
       <FAQ />
     <FinalCTA />
-<PromoTimer />
 <Footer />
     </div>
   );
