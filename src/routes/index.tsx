@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import {
   Bike,
@@ -31,8 +31,9 @@ export default function Index() {
       <Pricing />
       <AppSection />
       <FAQ />
-      <FinalCTA />
-      <Footer />
+    <FinalCTA />
+<PromoTimer />
+<Footer />
     </div>
   );
 }
@@ -622,6 +623,64 @@ function FinalCTA() {
   );
 }
 
+function PromoTimer() {
+  const PROMO_DURATION = 20 * 60 * 1000;
+  const STORAGE_KEY = "emri-promo-expires-at";
+
+  const [secondsLeft, setSecondsLeft] = useState(20 * 60);
+
+  useEffect(() => {
+    const savedValue = localStorage.getItem(STORAGE_KEY);
+    let expiresAt = savedValue ? Number(savedValue) : 0;
+
+    if (!expiresAt) {
+      expiresAt = Date.now() + PROMO_DURATION;
+      localStorage.setItem(STORAGE_KEY, String(expiresAt));
+    }
+
+    const updateTimer = () => {
+      const remaining = Math.max(
+        0,
+        Math.ceil((expiresAt - Date.now()) / 1000),
+      );
+
+      setSecondsLeft(remaining);
+    };
+
+    updateTimer();
+
+    const intervalId = window.setInterval(updateTimer, 1000);
+
+    return () => window.clearInterval(intervalId);
+  }, []);
+
+  const minutes = Math.floor(secondsLeft / 60);
+  const seconds = secondsLeft % 60;
+
+  return (
+    <section className="section-pad bg-surface/40">
+      <div className="container-x">
+        <div className="mx-auto max-w-xl rounded-3xl border border-primary/40 bg-card p-8 text-center shadow-lg">
+          <p className="text-lg font-semibold">
+            До конца действия промокода
+          </p>
+
+          <div className="mt-4 text-5xl font-black text-primary tabular-nums">
+            {String(minutes).padStart(2, "0")}:
+            {String(seconds).padStart(2, "0")}
+          </div>
+
+          <a
+            href="#prices"
+            className="mt-6 inline-flex rounded-xl bg-primary px-8 py-4 font-bold text-primary-foreground transition hover:scale-105"
+          >
+            Получить скидку
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
 function Footer() {
   return (
     <footer className="border-t border-border py-10">
