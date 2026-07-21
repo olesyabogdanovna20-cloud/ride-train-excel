@@ -80,14 +80,19 @@ function Hero() {
       <div className="container-x relative section-pad pt-16 md:pt-24">
         <div className="max-w-3xl">
           <span className="eyebrow">Обучение онлайн</span>
-          <h1 className="mt-5 text-5xl md:text-7xl font-black leading-[1.05]">
-            EMRI —{" "}
-            <span className="text-primary">обучение велоспорту и триатлону</span>
-          </h1>
-          <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl">
-            От профессиональных тренеров. Практические видеоуроки, разбор техники
-            и тренировочные программы в удобном мобильном приложении.
-          </p>
+        <h1 className="mt-5 text-5xl md:text-7xl font-black leading-[1.05]">
+  EMRI
+</h1>
+
+<p className="mt-3 text-xl md:text-2xl font-semibold uppercase tracking-wide text-primary">
+  Elevate more | Reach impossible
+</p>
+
+<p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-4xl">
+  Обучение велоспорту и триатлону от профессиональных тренеров.
+  Практические видеоуроки, разбор техники и тренировочные программы
+  в удобном мобильном приложении.
+</p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a href="#free" className="btn-primary">
               Попробовать бесплатно <ArrowRight className="h-4 w-4" />
