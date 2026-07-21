@@ -40,18 +40,18 @@ export default function Index() {
 function Nav() {
   return (
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur-md">
-      <div className="container-x flex h-16 items-center justify-between">
+     <div className="container-x flex h-20 items-center justify-between">
         <a href="#top" aria-label="EMRI" className="flex items-center">
           <img
             src={logo}
             alt="EMRI"
             loading="eager"
-            width={56}
-            height={56}
-            className="h-14 w-auto rounded-lg"
+            width={72}
+            height={72}
+           className="h-[72px] w-auto rounded-lg"
           />
         </a>
-        <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
+        <nav className="hidden md:flex items-center gap-8 text-lg text-muted-foreground">
           <a href="#directions" className="hover:text-foreground transition">Направления</a>
           <a href="#coaches" className="hover:text-foreground transition">Тренеры</a>
           <a href="#free" className="hover:text-foreground transition">Бесплатные уроки</a>
