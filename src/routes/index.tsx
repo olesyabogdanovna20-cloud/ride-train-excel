@@ -269,12 +269,49 @@ function CoachCard({ img, name, title, achievements, experience }: {
 }
 
 function FreeLessons() {
-  const cycling = [
-    { t: "Введение", url: "https://kinescope.io/2i5XjhXay2XQFmfgVknhvp", image: "/sásá.jpg" },
-    { t: "Байкфит", url: "https://kinescope.io/nUS1yQeamLQdzfTT3qouMm", image: "/байкфит.jpg" },
-    { t: "Расположение велосипеда", url: "https://kinescope.io/eJHeuLmAQi3BV9MMg8KudH", image: "/расположение.jpg" },
-    { t: "Тренировка на повышение скорости", url: "https://kinescope.io/m1MJWfc3QbDtEKKQssedY9", image: "/скорость.jpg" },
-  ];
+ const cycling = [
+
+  {
+
+    t: "Введение",
+
+    url: "https://kinescope.io/2i5XjhXay2XQFmfgVknhvp",
+
+    image: "/intro.jpg",
+
+  },
+
+  {
+
+    t: "Байкфит",
+
+    url: "https://kinescope.io/nUS1yQeamLQdzfTT3qouMm",
+
+    image: "/bikefit.jpg",
+
+  },
+
+  {
+
+    t: "Расположение велосипеда",
+
+    url: "https://kinescope.io/eJHeuLmAQi3BV9MMg8KudH",
+
+    image: "/bike-position.jpg",
+
+  },
+
+  {
+
+    t: "Тренировка на повышение скорости",
+
+    url: "https://kinescope.io/m1MJWfc3QbDtEKKQssedY9",
+
+    image: "/speed.jpg",
+
+  },
+
+];
   const tri = [
     { t: "С чего начать", url: "https://kinescope.io/0AGQPiDNieLUPVhqk8ftXX" },
     { t: "Выбор экипировки", url: "https://kinescope.io/jJntw8h6CVfqCY83sd98bg" },
