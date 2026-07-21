@@ -270,10 +270,10 @@ function CoachCard({ img, name, title, achievements, experience }: {
 
 function FreeLessons() {
   const cycling = [
-    { t: "Введение", url: "https://kinescope.io/2i5XjhXay2XQFmfgVknhvp" },
-    { t: "Байкфит", url: "https://kinescope.io/nUS1yQeamLQdzfTT3qouMm" },
-    { t: "Расположение велосипеда", url: "https://kinescope.io/eJHeuLmAQi3BV9MMg8KudH" },
-    { t: "Тренировка на повышение скорости", url: "https://kinescope.io/m1MJWfc3QbDtEKKQssedY9" },
+    { t: "Введение", url: "https://kinescope.io/2i5XjhXay2XQFmfgVknhvp", image: "/sásá.jpg" },
+    { t: "Байкфит", url: "https://kinescope.io/nUS1yQeamLQdzfTT3qouMm", image: "/байкфит.jpg" },
+    { t: "Расположение велосипеда", url: "https://kinescope.io/eJHeuLmAQi3BV9MMg8KudH", image: "/расположение.jpg" },
+    { t: "Тренировка на повышение скорости", url: "https://kinescope.io/m1MJWfc3QbDtEKKQssedY9", image: "/скорость.jpg" },
   ];
   const tri = [
     { t: "С чего начать", url: "https://kinescope.io/0AGQPiDNieLUPVhqk8ftXX" },
@@ -296,7 +296,13 @@ function FreeLessons() {
   );
 }
 
-function LessonRow({ title, items }: { title: string; items: { t: string; url?: string }[] }) {
+function LessonRow({
+  title,
+  items,
+}: {
+  title: string;
+  items: { t: string; url?: string; image?: string }[];
+}) {
   const [openUrl, setOpenUrl] = useState<string | null>(null);
   const embedUrl = openUrl
     ? openUrl.replace("kinescope.io/", "kinescope.io/embed/") + "?autoplay=1"
@@ -311,7 +317,7 @@ function LessonRow({ title, items }: { title: string; items: { t: string; url?: 
             <div className="group rounded-2xl bg-card border border-border overflow-hidden hover:border-primary/50 transition h-full">
               <div className="aspect-video relative overflow-hidden grid place-items-center">
                 <img
-                  src={videoPoster}
+                  src={it.image ?? videoPoster}
                   alt=""
                   loading="lazy"
                   className="absolute inset-0 h-full w-full object-cover"
