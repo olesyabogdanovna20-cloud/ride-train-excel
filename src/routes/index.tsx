@@ -278,7 +278,7 @@ function FreeLessons() {
 
     url: "https://kinescope.io/2i5XjhXay2XQFmfgVknhvp",
 
-    image: "/intro.jpg",
+    image: "/intro.webp",
 
   },
 
@@ -288,7 +288,7 @@ function FreeLessons() {
 
     url: "https://kinescope.io/nUS1yQeamLQdzfTT3qouMm",
 
-    image: "/bikefit.jpg",
+    image: "/bikefit.webp",
 
   },
 
@@ -298,7 +298,7 @@ function FreeLessons() {
 
     url: "https://kinescope.io/eJHeuLmAQi3BV9MMg8KudH",
 
-    image: "/bike-position.jpg",
+    image: "/bike-position.webp",
 
   },
 
@@ -308,7 +308,7 @@ function FreeLessons() {
 
     url: "https://kinescope.io/m1MJWfc3QbDtEKKQssedY9",
 
-    image: "/speed.jpg",
+    image: "/speed.webp",
 
   },
 
@@ -321,7 +321,7 @@ function FreeLessons() {
 
     url: "https://kinescope.io/0AGQPiDNieLUPVhqk8ftXX",
 
-    image: "/tri-start.jpg",
+    image: "/tri-start.webp",
 
   },
 
@@ -339,7 +339,7 @@ function FreeLessons() {
 
     url: "https://kinescope.io/athCUc7XLmhuxsDiR4kNxQ",
 
-    image: "/tri-warmup.jpg",
+    image: "/tri-warmup.webp",
 
   },
 
@@ -349,7 +349,7 @@ function FreeLessons() {
 
     url: "https://kinescope.io/cbtkLEm7fSnK14wfo2mKej",
 
-    image: "/tri-injury.jpg",
+    image: "/tri-injury.webp",
 
   },
 
