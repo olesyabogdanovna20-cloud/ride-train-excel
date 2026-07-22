@@ -456,8 +456,8 @@ function Pricing() {
             icon={Bike}
             title="Велоспорт"
             plans={[
-              { p: "1 месяц", c: "1 900 ₽", url: "https://payform.ru/dgc4KQR/" },
-              { p: "3 месяца", c: "3 990 ₽", url: "https://payform.ru/dgc4KQR/" },
+              { p: "1 месяц", c: "1 900 ₽", url: "https://payform.ru/lrc4LXO/" },
+              { p: "3 месяца", c: "3 990 ₽", url: "https://payform.ru/nbc4LYC/" },
               { p: "12 месяцев", c: "11 400 ₽", badge: "Выгодно", url: "https://payform.ru/jac4KTX/" },
             ]}
           />
@@ -466,9 +466,9 @@ function Pricing() {
             title="Триатлон"
             featured
             plans={[
-              { p: "1 месяц", c: "3 300 ₽", url: "https://payform.ru/kec4KUy/" },
-              { p: "3 месяца", c: "6 930 ₽", url: "https://payform.ru/mic4KVG/" },
-              { p: "12 месяцев", c: "19 800 ₽", badge: "Выгодно", url: "https://payform.ru/ofc4KWH/" },
+              { p: "1 месяц", c: "3 300 ₽", url: "https://payform.ru/sic4M1o/" },
+              { p: "3 месяца", c: "6 930 ₽", url: "https://payform.ru/tfc4M1S/" },
+              { p: "12 месяцев", c: "19 800 ₽", badge: "Выгодно", url: "https://payform.ru/5dc4M2t/" },
             ]}
           />
         </div>
