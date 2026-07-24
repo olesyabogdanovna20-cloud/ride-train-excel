@@ -28,6 +28,7 @@ export default function Index() {
       <Directions />
       <Coaches />
       <FreeLessons />
+      <InstructionVideo />
       <Pricing />
       <PromoTimer />
       <AppSection />
@@ -679,6 +680,46 @@ function PromoTimer() {
         </div>
       </div>
     </section>
+  );
+}
+function InstructionVideo() {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <>
+      <section className="section-pad">
+        <div className="container-x text-center">
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8">
+            Подробная видео-инструкция для получения полного доступа
+            к остальным урокам внутри приложения.
+          </p>
+
+          <button
+            onClick={() => setOpen(true)}
+            className="inline-flex items-center rounded-xl bg-primary px-8 py-4 text-primary-foreground font-bold hover:opacity-90 transition"
+          >
+            СМОТРЕТЬ ИНСТРУКЦИЮ
+          </button>
+        </div>
+      </section>
+
+      <Dialog open={open} onOpenChange={setOpen}>
+        <DialogContent className="max-w-5xl p-0 overflow-hidden">
+          <DialogTitle className="sr-only">
+            Видео-инструкция
+          </DialogTitle>
+
+          <div className="aspect-video">
+            <iframe
+              src="https://kinescope.io/embed/mupSR3eZPu8omZzWT65Lbk?autoplay=1"
+              allow="autoplay; fullscreen; picture-in-picture; encrypted-media;"
+              allowFullScreen
+              className="w-full h-full"
+            />
+          </div>
+        </DialogContent>
+      </Dialog>
+    </>
   );
 }
 function Footer() {
